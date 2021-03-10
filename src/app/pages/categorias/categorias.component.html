@@ -1,0 +1,71 @@
+<div class="col-12 grid-margin">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Calculadora</h4>
+      <form class="form-sample">
+        <p class="card-description">
+
+        </p>
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-md-6" *ngFor="let item of categorias | orderby:'asc':'nombre'">
+                <div class="form-group row">
+                  <label class="col-6 col-form-label">{{item.nombre}}</label>
+                  <div class="col-6">
+                    <input type="number" [id]='item._id' #tipo (change)="calculate(item._id, tipo.value)"
+                      class="form-control form-control-sm" aria-label="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Variations</h4>
+                <div class="template-demo">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th class="pl-0">Nombre</th>
+                        <th class="text-right">Totales</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="pl-0">Proteinas</td>
+                        <td class="pr-0 text-right">
+                          <div class="badge badge-pill badge-primary">{{proteinasTotales}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pl-0">Lipidos</td>
+                        <td class="pr-0 text-right">
+                          <div class="badge badge-pill badge-success">{{lipidosTotales}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pl-0">Hidratos de carbono</td>
+                        <td class="pr-0 text-right">
+                          <div class="badge badge-pill badge-info">{{hdcTotales}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pl-0">Calorias</td>
+                        <td class="pr-0 text-right">
+                          <div class="badge badge-pill badge-danger">{{caloriasTotales}}</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

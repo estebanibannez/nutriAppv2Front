@@ -1,0 +1,30 @@
+<!-- Slider main container -->
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide" [ngStyle]="{
+      'background-size':'cover',
+      'background-image':'url(https://nutriciongrupobimbo-com-assets.s3.amazonaws.com/s3fs-public/styles/stage_home/public/2020-04/header_un_plan_para_ti_degradado.jpg?itok=I0QHPDA_)'
+    }">
+
+      <div class="slider-description">
+        <h1>texto slider</h1>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nobis? Quos natus repellendus earum
+          laudantium,
+          tenetur iste veniam et omnis ipsam culpa sunt neque rem sit temporibus veritatis, praesentium assumenda.</h6>
+      </div>
+    </div>
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div (click)="swiperprev()" class="swiper-button-prev"></div>
+  <div (click)="swipernext()" class="swiper-button-next"></div>
+
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
