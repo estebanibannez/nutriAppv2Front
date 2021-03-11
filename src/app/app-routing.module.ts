@@ -1,3 +1,4 @@
+import { PacientesComponent } from './pages/pacientes/pacientes.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'user-pages', loadChildren: () => import('./user-pages/user-pages.module').then(m => m.UserPagesModule) },
   { path: 'error-pages', loadChildren: () => import('./error-pages/error-pages.module').then(m => m.ErrorPagesModule) },
 
-  { path: 'Categorias', component: CategoriasComponent, },
+  { path: 'Categorias', component: CategoriasComponent },
+  { path: 'Pacientes', component: PacientesComponent }
 ];
 
 @NgModule({
